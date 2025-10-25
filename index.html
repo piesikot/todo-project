@@ -129,6 +129,21 @@
       defaultTask2Deletion.addEventListener("click", function () {
         defaultTask2.remove();
       });
+
+      // 3  zadanie na liście
+      const defaultTask3 = document.createElement("li");
+      const defaultTask3Deletion = document.createElement("span");
+      const defaultTask3Text = document.createTextNode(
+        "Test, submodule działa!, mogę to usunąć! :D->"
+      );
+
+      defaultTask3.appendChild(defaultTask3Text);
+      toDoList.appendChild(defaultTask3);
+      defaultTask3Deletion.setAttribute("class", "task-deletion");
+      defaultTask3.appendChild(defaultTask3Deletion);
+      defaultTask3Deletion.addEventListener("click", function () {
+        defaultTask3.remove();
+      });
     </script>
   </body>
 </html>
