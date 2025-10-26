@@ -9,7 +9,7 @@ Mój pierwszy, bardzo prosty projekt webowy. Aplikacja pozwala użytkownikowi do
 - Vanilla JavaScript – obsługa zdarzeń (addEventListener), manipulacja DOM (createElement, appendChild, remove).
   Responsywność – dzięki jednostkom względnym strona dopasowuje się do rozdzielczości ekranu.
 
-  ### 👤 Autor
+### 👤 Autor
 
 - Projekt stworzony przez _Emil Piesk_.
 - 🔗 GitHub: [piesikot](https://github.com/piesikot).
