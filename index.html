@@ -79,25 +79,26 @@
           newTask.remove();
         });
 
-        // Zliczanie spacji i obsługa przypadku "same spacje"
+        // Zliczanie spacji
         const spaceCount = (taskValue.match(/ /g) || []).length;
 
         if (taskValue === "") {
           newTask.textContent = "Do nothing, just chill ;)";
           newTask.appendChild(taskDeletion);
-        } else if (spaceCount === taskValue.length && taskValue.length > 0) {
-          // string składa się tylko ze spacji
-          if (spaceCount > 3) {
-            newTask.textContent = "Do spacebar press multiple times...";
-          } else if (spaceCount === 1) {
-            newTask.textContent = "Do spacebar press...";
-          } else if (spaceCount === 2) {
-            newTask.textContent = "Do spacebar press twice...";
-          } else if (spaceCount === 3) {
-            newTask.textContent = "Do spacebar press three times...";
-          }
-          newTask.appendChild(taskDeletion);
+        } else if (taskValue === " ") {
+          newTask.textContent = "Do spacebar press...";
+        } else if (taskValue === "  ") {
+          newTask.textContent = "Do spacebar press twice...";
+        } else if (taskValue === "   ") {
+          newTask.textContent = "Do spacebar press three times...";
+        } else if (taskValue == spaceCount.length > 3) {
+          console.log("spaceCount = " + taskValue.length);
+          newTask.textContent =
+            "Do spacebar press " + taskValue.length + " times💪.";
+        } else if ((taskValue == spaceCount.length) === 666) {
+          newTask.textContent = "Go to church.";
         }
+        newTask.appendChild(taskDeletion);
       });
 
       // Standardowe zadanie na liście
@@ -144,8 +145,6 @@
       // defaultTask3Deletion.addEventListener("click", function () {
       //   defaultTask3.remove();
       // });
-      //alert("Very last submodule testing...");
-      //very very last submodule testing.
     </script>
   </body>
 </html>
